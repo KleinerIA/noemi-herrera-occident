@@ -1,0 +1,2595 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoemÃ­ Herrera | Agente Exclusiva Occident Seguros</title>
+    <style>
+        body { margin: 0; padding-top: 72px; font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+    </style>
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10, 25, 60, 0.97);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+    padding: 0 2rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.35);
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .navbar-logo-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #D4AF37 0%, #F5D06A 50%, #B8960C 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 2px 12px rgba(212,175,55,0.4);
+  }
+
+  .navbar-logo-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: #0A193C;
+  }
+
+  .navbar-brand-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-brand-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  .navbar-brand-subtitle {
+    font-size: 0.65rem;
+    font-weight: 400;
+    color: #D4AF37;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .navbar-nav a {
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 0.03em;
+    transition: color 0.25s ease;
+    position: relative;
+    padding-bottom: 2px;
+  }
+
+  .navbar-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #D4AF37;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .navbar-nav a:hover {
+    color: #D4AF37;
+  }
+
+  .navbar-nav a:hover::after {
+    width: 100%;
+  }
+
+  .navbar-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .btn-nav-outline {
+    padding: 8px 20px;
+    border: 1.5px solid rgba(212,175,55,0.6);
+    background: transparent;
+    color: #D4AF37;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.825rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    letter-spacing: 0.03em;
+  }
+
+  .btn-nav-outline:hover {
+    background: rgba(212,175,55,0.12);
+    border-color: #D4AF37;
+  }
+
+  .btn-nav-primary {
+    padding: 8px 20px;
+    background: linear-gradient(135deg, #D4AF37, #B8960C);
+    color: #0A193C;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.825rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    letter-spacing: 0.03em;
+    box-shadow: 0 2px 12px rgba(212,175,55,0.3);
+  }
+
+  .btn-nav-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 18px rgba(212,175,55,0.45);
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .hamburger span {
+    width: 24px;
+    height: 2px;
+    background: #D4AF37;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(150deg, #060E24 0%, #0A193C 40%, #0D1F4A 70%, #0F2456 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 72px;
+  }
+
+  .hero-bg-pattern {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .hero-bg-pattern::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 70vw;
+    height: 70vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 65%);
+  }
+
+  .hero-bg-pattern::after {
+    content: '';
+    position: absolute;
+    bottom: -25%;
+    left: -15%;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(30,80,160,0.25) 0%, transparent 65%);
+  }
+
+  .hero-grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(212,175,55,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212,175,55,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  .hero-floating-orb-1 {
+    position: absolute;
+    top: 18%;
+    right: 8%;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,175,55,0.10) 0%, transparent 70%);
+    animation: floatOrb 7s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .hero-floating-orb-2 {
+    position: absolute;
+    bottom: 15%;
+    right: 25%;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(100,149,237,0.12) 0%, transparent 70%);
+    animation: floatOrb 9s ease-in-out infinite reverse;
+    pointer-events: none;
+  }
+
+  @keyframes floatOrb {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-20px) scale(1.05); }
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem 4rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212,175,55,0.12);
+    border: 1px solid rgba(212,175,55,0.3);
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-badge-dot {
+    width: 7px;
+    height: 7px;
+    background: #D4AF37;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(0.85); }
+  }
+
+  .hero-badge-text {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #D4AF37;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-weight: 800;
+    line-height: 1.12;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-title-accent {
+    background: linear-gradient(135deg, #D4AF37 0%, #F5D06A 50%, #C9A227 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.75;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-agent-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-agent-name span {
+    color: #D4AF37;
+    font-weight: 700;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+
+  .btn-hero-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 28px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.925rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+    letter-spacing: 0.02em;
+  }
+
+  .btn-hero-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(37,211,102,0.45);
+  }
+
+  .btn-hero-whatsapp svg {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+    flex-shrink: 0;
+  }
+
+  .btn-hero-meeting {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: transparent;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.925rem;
+    font-weight: 600;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 0.02em;
+    backdrop-filter: blur(6px);
+  }
+
+  .btn-hero-meeting:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(212,175,55,0.5);
+    color: #D4AF37;
+    transform: translateY(-2px);
+  }
+
+  .btn-hero-meeting svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+    flex-shrink: 0;
+  }
+
+  .hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .hero-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .hero-stat-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #D4AF37;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-stat-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .hero-stat-divider {
+    width: 1px;
+    height: 36px;
+    background: rgba(255,255,255,0.12);
+  }
+
+  /* HERO RIGHT - Visual Card */
+  .hero-visual {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+  }
+
+  .hero-card-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .hero-main-card {
+    background: linear-gradient(145deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.03) 100%);
+    border: 1px solid rgba(212,175,55,0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.05) inset;
+  }
+
+  .hero-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .hero-card-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #D4AF37, #B8960C);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #0A193C;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(212,175,55,0.35);
+  }
+
+  .hero-card-agent-info h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2px;
+  }
+
+  .hero-card-agent-info p {
+    font-size: 0.75rem;
+    color: #D4AF37;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-card-verified {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(37,211,102,0.12);
+    border: 1px solid rgba(37,211,102,0.25);
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+
+  .hero-card-verified-dot {
+    width: 6px;
+    height: 6px;
+    background: #25D366;
+    border-radius: 50%;
+  }
+
+  .hero-card-verified-text {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #25D366;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .hero-card-services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-card-service-item {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: border-color 0.25s ease;
+  }
+
+  .hero-card-service-item:hover {
+    border-color: rgba(212,175,55,0.25);
+  }
+
+  .hero-card-service-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  .icon-bg-gold { background: rgba(212,175,55,0.15); }
+  .icon-bg-blue { background: rgba(100,149,237,0.15); }
+  .icon-bg-green { background: rgba(37,211,102,0.12); }
+  .icon-bg-purple { background: rgba(167,130,255,0.12); }
+
+  .hero-card-service-name {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.02em;
+  }
+
+  .hero-card-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #D4AF37, #B8960C);
+    color: #0A193C;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(212,175,55,0.3);
+    letter-spacing: 0.02em;
+  }
+
+  .hero-card-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(212,175,55,0.4);
+  }
+
+  /* Floating mini-cards */
+  .hero-float-card-1 {
+    position: absolute;
+    top: -24px;
+    right: -20px;
+    background: rgba(10,25,60,0.95);
+    border: 1px solid rgba(212,175,55,0.3);
+    border-radius: 12px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    animation: floatCard1 6s ease-in-out infinite;
+  }
+
+  @keyframes floatCard1 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .hero-float-card-2 {
+    position: absolute;
+    bottom: -20px;
+    left: -24px;
+    background: rgba(10,25,60,0.95);
+    border: 1px solid rgba(37,211,102,0.25);
+    border-radius: 12px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    animation: floatCard2 7s ease-in-out infinite;
+  }
+
+  @keyframes floatCard2 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+
+  .float-card-icon {
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+
+  .float-card-text-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .float-card-label {
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .float-card-value {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 968px) {
+    .navbar-nav { display: none; }
+    .hamburger { display: flex; }
+    .btn-nav-outline { display: none; }
+
+    .hero-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 3rem;
+      padding: 4rem 1.5rem 3rem;
+    }
+
+    .hero-badge { margin: 0 auto 1.5rem; }
+    .hero-cta-group { justify-content: center; }
+    .hero-stats { justify-content: center; }
+    .hero-visual { justify-content: center; }
+    .hero-card-wrap { max-width: 360px; }
+    .hero-float-card-1 { right: -8px; }
+    .hero-float-card-2 { left: -8px; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title { font-size: 2rem; }
+    .hero-cta-group { flex-direction: column; align-items: stretch; }
+    .btn-hero-whatsapp, .btn-hero-meeting { justify-content: center; }
+    .hero-stats { gap: 1.25rem; }
+    .hero-float-card-1, .hero-float-card-2 { display: none; }
+  }
+</style>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="navbar">
+  <a href="#" class="navbar-brand">
+    <div class="navbar-logo-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4z"/>
+      </svg>
+    </div>
+    <div class="navbar-brand-text">
+      <span class="navbar-brand-name">NoemÃ­ Herrera</span>
+      <span class="navbar-brand-subtitle">Occident Seguros Â· Agente</span>
+    </div>
+  </a>
+
+  <ul class="navbar-nav">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#coberturas">Coberturas</a></li>
+    <li><a href="#nosotros">Sobre mÃ­</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+
+  <div class="navbar-cta">
+    <a href="#" class="btn-nav-outline">Mis seguros</a>
+    <a href="https://wa.me/1234567890" class="btn-nav-primary" target="_blank" rel="noopener">ð¬ WhatsApp</a>
+  </div>
+
+  <button class="hamburger" aria-label="MenÃº">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-floating-orb-1"></div>
+  <div class="hero-floating-orb-2"></div>
+
+  <div class="hero-container">
+    <!-- LEFT CONTENT -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        <span class="hero-badge-text">Occident Seguros Â· Agente Certificado</span>
+      </div>
+
+      <h1 class="hero-title">
+        Tu Tranquilidad,
+        <span class="hero-title-accent">Nuestra Prioridad</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Protege lo que mÃ¡s importa con soluciones de seguro personalizadas.
+        AsesorÃ­a experta, coberturas completas y atenciÃ³n cercana cuando mÃ¡s lo necesitas.
+      </p>
+
+      <p class="hero-agent-name">
+        Con <span>NoemÃ­ Herrera</span> Â· Especialista en Seguros de Vida, Auto, Hogar y Empresas
+      </p>
+
+      <div class="hero-cta-group">
+        <a
+          href="https://wa.me/1234567890?text=Hola%20NoemÃ­,%20me%20gustarÃ­a%20cotizar%20un%20seguro"
+          class="btn-hero-whatsapp"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Chatear con Bot
+        </a>
+
+        <a href="#agendar" class="btn-hero-meeting">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          Agendar ReuniÃ³n
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-value">+850</span>
+          <span class="hero-stat-label">Clientes activos</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">12+</span>
+          <span class="hero-stat-label">AÃ±os de experiencia</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">98%</span>
+          <span class="hero-stat-label">SatisfacciÃ³n</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT VISUAL -->
+    <div class="hero-visual">
+      <div class="hero-card-wrap">
+        <!-- Floating mini cards -->
+        <div class="hero-float-card-1">
+          <div class="float-card-icon">ð</div>
+          <div class="float-card-text-wrap">
+            <span class="float-card-label">Reconocimiento</span>
+            <span class="float-card-value">Agente Top 2024</span>
+          </div>
+        </div>
+
+        <div class="hero-float-card-2">
+          <div class="float-card-icon">â</div>
+          <div class="float-card-text-wrap">
+            <span class="float-card-label">Respuesta</span>
+            <span class="float-card-value">En menos de 2h</span>
+          </div>
+        </div>
+
+        <!-- Main card -->
+        <div class="hero-main-card">
+          <div class="hero-card-header">
+            <div class="hero-card-avatar">NH</div>
+            <div class="hero-card-agent-info">
+              <h3>NoemÃ­ Herrera</h3>
+              <p>Agente Occident Seguros</p>
+            </div>
+            <div class="hero-card-verified">
+              <div class="hero-card-verified-dot"></div>
+              <span class="hero-card-verified-text">Online</span>
+            </div>
+          </div>
+
+          <div class="hero-card-services">
+            <div class="hero-card-service-item">
+              <div class="hero-card-service-icon icon-bg-gold">ð¡ï¸</div>
+              <span class="hero-card-service-name">Seguro de Vida</span>
+            </div>
+            <div class="hero-card-service-item">
+              <div class="hero-card-service-icon icon-bg-blue">ð</div>
+              <span class="hero-card-service-name">Auto & Moto</span>
+            </div>
+            <div class="hero-card-service-item">
+              <div class="hero-card-service-icon icon-bg-green">ð </div>
+              <span class="hero-card-service-name">Hogar</span>
+            </div>
+            <div class="hero-card-service-item">
+              <div class="hero-card-service-icon icon-bg-purple">ð¢</div>
+              <span class="hero-card-service-name">Empresarial</span>
+            </div>
+          </div>
+
+          <a href="#contacto" class="hero-card-cta">
+            â¨ Obtener mi cotizaciÃ³n gratis
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .catalog-section {
+    background: #f4f6f9;
+    padding: 80px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .catalog-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .catalog-header h2 {
+    font-size: 2.4rem;
+    color: #0a1f44;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .catalog-header h2 span {
+    color: #c9a84c;
+  }
+
+  .catalog-header p {
+    font-size: 1.05rem;
+    color: #5a6a85;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .catalog-header .divider {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #c9a84c, #e8c96d);
+    border-radius: 2px;
+    margin: 16px auto 20px;
+  }
+
+  .catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .catalog-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 36px 24px 32px;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(10, 31, 68, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-bottom: 4px solid transparent;
+  }
+
+  .catalog-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0a1f44, #c9a84c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .catalog-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .catalog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 36px rgba(10, 31, 68, 0.15);
+  }
+
+  .card-icon-wrapper {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0a1f44 0%, #1a3a6e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 14px rgba(10, 31, 68, 0.25);
+  }
+
+  .catalog-card:hover .card-icon-wrapper {
+    background: linear-gradient(135deg, #c9a84c 0%, #e8c96d 100%);
+    transform: scale(1.1);
+  }
+
+  .card-icon-wrapper svg {
+    width: 32px;
+    height: 32px;
+    fill: #ffffff;
+    transition: fill 0.3s ease;
+  }
+
+  .catalog-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0a1f44;
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+  }
+
+  .catalog-card p {
+    font-size: 0.88rem;
+    color: #6b7a96;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .card-cta {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #c9a84c;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border-bottom: 1.5px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+
+  .catalog-card:hover .card-cta {
+    border-color: #c9a84c;
+  }
+
+  .card-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: linear-gradient(135deg, #c9a84c, #e8c96d);
+    color: #0a1f44;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 600px) {
+    .catalog-header h2 {
+      font-size: 1.8rem;
+    }
+    .catalog-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .catalog-card {
+      padding: 28px 16px 24px;
+    }
+    .card-icon-wrapper {
+      width: 58px;
+      height: 58px;
+    }
+    .card-icon-wrapper svg {
+      width: 26px;
+      height: 26px;
+    }
+  }
+</style>
+
+<section class="catalog-section">
+  <div class="catalog-header">
+    <h2>Nuestros <span>Productos</span></h2>
+    <div class="divider"></div>
+    <p>Soluciones de seguro personalizadas para cada etapa de tu vida. Encuentra la cobertura que mejor se adapta a tus necesidades.</p>
+  </div>
+
+  <div class="catalog-grid">
+
+    <!-- Coche -->
+    <div class="catalog-card">
+      <div class="card-icon-wrapper">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+        </svg>
+      </div>
+      <h3>Seguro de Coche</h3>
+      <p>Protege tu vehÃ­culo con coberturas a todo riesgo, terceros y asistencia en carretera 24h.</p>
+      <span class="card-cta">Solicitar info &rarr;</span>
+    </div>
+
+    <!-- Hogar -->
+    <div class="catalog-card">
+      <div class="card-icon-wrapper">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+      </div>
+      <h3>Seguro de Hogar</h3>
+      <p>Cubre tu vivienda frente a incendios, robos, daÃ±os por agua y responsabilidad civil.</p>
+      <span class="card-cta">Solicitar info &rarr;</span>
+    </div>
+
+    <!-- Salud -->
+    <div class="catalog-card">
+      <span class="card-badge">Popular</span>
+      <div class="card-icon-wrapper">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402C1 4.022 3.022 2 5.857 2c1.985 0 3.73 1.174 4.791 2.566C11.412 3.174 12.98 2 15.143 2 17.978 2 20 4.022 20 7.191c0 4.105-5.37 8.863-8 14.402zm0-4.154l.66-.66C16.148 13.2 19 10.103 19 7.191 19 4.573 17.3 3 15.143 3c-1.57 0-3.052.99-3.955 2.23L12 6.351l-.188-.121C10.909 3.99 9.427 3 7.857 3 5.7 3 4 4.573 4 7.191c0 2.912 2.852 6.009 6.34 9.588L12 17.44z"/>
+        </svg>
+      </div>
+      <h3>Seguro de Salud</h3>
+      <p>Accede a los mejores especialistas sin listas de espera. Cuida tu bienestar y el de tu familia.</p>
+      <span class="card-cta">Solicitar info &rarr;</span>
+    </div>
+
+    <!-- Vida -->
+    <div class="catalog-card">
+      <div class="card-icon-wrapper">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+        </svg>
+      </div>
+      <h3>Seguro de Vida</h3>
+      <p>Garantiza el futuro de los tuyos con coberturas de fallecimiento, invalidez y enfermedades graves.</p>
+      <span class="card-cta">Solicitar info &rarr;</span>
+    </div>
+
+    <!-- Ahorro / JubilaciÃ³n -->
+    <div class="catalog-card">
+      <div class="card-icon-wrapper">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+        </svg>
+      </div>
+      <h3>Ahorro &amp; JubilaciÃ³n</h3>
+      <p>Planifica tu retiro con planes de pensiones, PIAS y seguros de ahorro a medida.</p>
+      <span class="card-cta">Solicitar info &rarr;</span>
+    </div>
+
+    <!-- Empresas -->
+    <div class="catalog-card">
+      <span class="card-badge">Negocios</span>
+      <div class="card-icon-wrapper">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
+        </svg>
+      </div>
+      <h3>Seguros para Empresas</h3>
+      <p>Protege tu negocio con seguros de responsabilidad civil, multirriesgo industrial y colectivos.</p>
+      <span class="card-cta">Solicitar info &rarr;</span>
+    </div>
+
+    <!-- Decesos -->
+    <div class="catalog-card">
+      <div class="card-icon-wrapper">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+      </div>
+      <h3>Seguro de Decesos</h3>
+      <p>Proporciona a tu familia la tranquilidad y el apoyo necesarios en los momentos mÃ¡s difÃ­ciles.</p>
+      <span class="card-cta">Solicitar info &rarr;</span>
+    </div>
+
+    <!-- Otros -->
+    <div class="catalog-card">
+      <div class="card-icon-wrapper">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+        </svg>
+      </div>
+      <h3>Otros Seguros</h3>
+      <p>Mascotas, viajes, accidentes personales y mucho mÃ¡s. Consulta todas las opciones disponibles.</p>
+      <span class="card-cta">Solicitar info &rarr;</span>
+    </div>
+
+  </div>
+</section>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+
+  .noemi-section {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+  }
+
+  .noemi-section *, .noemi-section *::before, .noemi-section *::after {
+    box-sizing: border-box;
+  }
+
+  /* LIFE INSURANCE SECTION */
+  .life-insurance-section {
+    background: linear-gradient(135deg, #0a1628 0%, #1a2a4a 50%, #0d1f3c 100%);
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .life-insurance-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 180, 216, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .life-insurance-section::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.07) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .section-badge {
+    display: inline-block;
+    background: linear-gradient(90deg, #00b4d8, #0077b6);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+    line-height: 1.15;
+  }
+
+  .section-title span {
+    background: linear-gradient(90deg, #00b4d8, #48cae4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    margin: 0 0 50px 0;
+    font-weight: 300;
+    max-width: 520px;
+  }
+
+  .insurance-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  @media (max-width: 900px) {
+    .insurance-cards-grid {
+      grid-template-columns: 1fr;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+  }
+
+  .insurance-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 36px 30px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .insurance-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0, 180, 216, 0.4);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3), 0 0 40px rgba(0, 180, 216, 0.08);
+  }
+
+  .insurance-card.featured {
+    background: linear-gradient(145deg, rgba(0,180,216,0.15), rgba(0,119,182,0.1));
+    border-color: rgba(0, 180, 216, 0.35);
+    box-shadow: 0 10px 40px rgba(0, 180, 216, 0.12);
+  }
+
+  .insurance-card.featured::before {
+    content: 'MÃS POPULAR';
+    position: absolute;
+    top: 18px;
+    right: -28px;
+    background: linear-gradient(90deg, #00b4d8, #0077b6);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 5px 36px;
+    transform: rotate(45deg);
+    transform-origin: center;
+  }
+
+  .card-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    font-size: 26px;
+  }
+
+  .icon-blue {
+    background: linear-gradient(135deg, rgba(0,180,216,0.25), rgba(0,119,182,0.15));
+    border: 1px solid rgba(0,180,216,0.3);
+  }
+
+  .icon-teal {
+    background: linear-gradient(135deg, rgba(72,202,228,0.25), rgba(0,180,216,0.15));
+    border: 1px solid rgba(72,202,228,0.3);
+  }
+
+  .icon-indigo {
+    background: linear-gradient(135deg, rgba(100,149,237,0.25), rgba(72,84,196,0.15));
+    border: 1px solid rgba(100,149,237,0.3);
+  }
+
+  .insurance-card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+  }
+
+  .insurance-card-desc {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+    margin: 0 0 24px 0;
+    font-weight: 300;
+  }
+
+  .insurance-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px 0;
+  }
+
+  .insurance-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-weight: 400;
+  }
+
+  .insurance-features li:last-child {
+    border-bottom: none;
+  }
+
+  .feature-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00b4d8, #48cae4);
+    flex-shrink: 0;
+  }
+
+  .insurance-cta-btn {
+    display: block;
+    text-align: center;
+    padding: 13px 20px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+  }
+
+  .btn-primary-gradient {
+    background: linear-gradient(90deg, #00b4d8, #0077b6);
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(0, 180, 216, 0.35);
+  }
+
+  .btn-primary-gradient:hover {
+    box-shadow: 0 10px 30px rgba(0, 180, 216, 0.5);
+    transform: scale(1.02);
+  }
+
+  .btn-outline-light {
+    background: transparent;
+    color: rgba(255,255,255,0.8);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .btn-outline-light:hover {
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.4);
+    color: #fff;
+  }
+
+  /* RENTING SECTION */
+  .renting-section {
+    background: linear-gradient(180deg, #f8faff 0%, #eef3fb 100%);
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .renting-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #00b4d8, #0077b6, #48cae4);
+  }
+
+  .renting-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .renting-title {
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800;
+    color: #0a1628;
+    margin: 0 0 12px 0;
+    line-height: 1.15;
+  }
+
+  .renting-title span {
+    background: linear-gradient(90deg, #00b4d8, #0077b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .renting-subtitle {
+    font-size: 16px;
+    color: #6b7a99;
+    font-weight: 300;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .vehicles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+
+  .vehicles-grid-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: calc(66.66% + 12px);
+    margin: 0 auto;
+  }
+
+  @media (max-width: 900px) {
+    .vehicles-grid, .vehicles-grid-bottom {
+      grid-template-columns: 1fr;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    .vehicles-grid-bottom {
+      margin-top: 24px;
+    }
+  }
+
+  .vehicle-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(10,22,40,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.04);
+  }
+
+  .vehicle-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(10,22,40,0.13);
+  }
+
+  .vehicle-card-header {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .vehicle-card-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(to top, rgba(255,255,255,0.6), transparent);
+  }
+
+  .bg-peugeot { background: linear-gradient(135deg, #e8f4fd 0%, #bee3f8 100%); }
+  .bg-kia { background: linear-gradient(135deg, #fef3e2 0%, #fde5b4 100%); }
+  .bg-seat { background: linear-gradient(135deg, #f0faf4 0%, #c6f6d5 100%); }
+  .bg-vw { background: linear-gradient(135deg, #f5f0ff 0%, #e9d8fd 100%); }
+  .bg-renault { background: linear-gradient(135deg, #fff0f0 0%, #fed7d7 100%); }
+
+  .vehicle-icon-big {
+    font-size: 56px;
+    line-height: 1;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.12));
+  }
+
+  .vehicle-brand-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8px);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #0a1628;
+    padding: 4px 10px;
+    border-radius: 50px;
+  }
+
+  .vehicle-card-body {
+    padding: 22px 22px 26px;
+  }
+
+  .vehicle-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0a1628;
+    margin: 0 0 4px 0;
+  }
+
+  .vehicle-type {
+    font-size: 12px;
+    color: #8a96af;
+    font-weight: 400;
+    margin: 0 0 18px 0;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .vehicle-price-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+
+  .price-from {
+    font-size: 11px;
+    color: #8a96af;
+    font-weight: 500;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .price-amount {
+    font-size: 30px;
+    font-weight: 800;
+    color: #0077b6;
+    line-height: 1;
+  }
+
+  .price-period {
+    font-size: 13px;
+    color: #8a96af;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+
+  .vehicle-specs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .spec-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #f0f4ff;
+    color: #3a5fd9;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 50px;
+  }
+
+  .vehicle-cta {
+    display: block;
+    text-align: center;
+    padding: 11px 16px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #00b4d8, #0077b6);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+  }
+
+  .vehicle-cta:hover {
+    box-shadow: 0 6px 20px rgba(0, 119, 182, 0.35);
+    transform: scale(1.02);
+  }
+
+  .renting-info-bar {
+    margin-top: 44px;
+    background: linear-gradient(135deg, #0a1628, #1a2a4a);
+    border-radius: 18px;
+    padding: 28px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .info-bar-text {
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .info-bar-text strong {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .info-bar-badges {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .info-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.8);
+    font-weight: 500;
+  }
+
+  .info-badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #00b4d8;
+    flex-shrink: 0;
+  }
+</style>
+
+<!-- ===== LIFE INSURANCE SECTION ===== -->
+<section class="noemi-section life-insurance-section">
+  <div class="section-container">
+    <div style="text-align: center; margin-bottom: 56px;">
+      <div class="section-badge">ð¡ï¸ Seguros de Vida</div>
+      <h2 class="section-title">Protege lo que mÃ¡s <span>importa</span></h2>
+      <p class="section-subtitle">Planes diseÃ±ados para cada etapa de tu vida, con la mejor cobertura y condiciones del mercado.</p>
+    </div>
+    <div class="insurance-cards-grid">
+
+      <!-- Card 1: Vida Temporal -->
+      <div class="insurance-card">
+        <div class="card-icon-wrapper icon-blue">
+          <span>â³</span>
+        </div>
+        <h3 class="insurance-card-title">Vida Temporal</h3>
+        <p class="insurance-card-desc">Cobertura durante un perÃ­odo concreto. Ideal para proteger a tu familia durante los aÃ±os de mayor responsabilidad econÃ³mica.</p>
+        <ul class="insurance-features">
+          <li><span class="feature-dot"></span> Cobertura por fallecimiento</li>
+          <li><span class="feature-dot"></span> Periodos de 5 a 30 aÃ±os</li>
+          <li><span class="feature-dot"></span> Prima constante garantizada</li>
+          <li><span class="feature-dot"></span> Capital asegurado flexible</li>
+          <li><span class="feature-dot"></span> Sin penalizaciÃ³n por cancelaciÃ³n</li>
+        </ul>
+        <button class="insurance-cta-btn btn-outline-light">Solicitar InformaciÃ³n</button>
+      </div>
+
+      <!-- Card 2: AmortizaciÃ³n (Featured) -->
+      <div class="insurance-card featured">
+        <div class="card-icon-wrapper icon-teal">
+          <span>ð </span>
+        </div>
+        <h3 class="insurance-card-title">AmortizaciÃ³n</h3>
+        <p class="insurance-card-desc">Vinculado a tu hipoteca o prÃ©stamo. Garantiza que tu deuda quede cancelada ante cualquier imprevisto que te afecte.</p>
+        <ul class="insurance-features">
+          <li><span class="feature-dot"></span> Capital decreciente o nivel</li>
+          <li><span class="feature-dot"></span> Cubre fallecimiento e invalidez</li>
+          <li><span class="feature-dot"></span> Compatible con cualquier banco</li>
+          <li><span class="feature-dot"></span> Condiciones mejores que el banco</li>
+          <li><span class="feature-dot"></span> GestiÃ³n de cambio incluida</li>
+        </ul>
+        <button class="insurance-cta-btn btn-primary-gradient">Calcular Mi Seguro</button>
+      </div>
+
+      <!-- Card 3: Ahorro -->
+      <div class="insurance-card">
+        <div class="card-icon-wrapper icon-indigo">
+          <span>ð°</span>
+        </div>
+        <h3 class="insurance-card-title">Ahorro</h3>
+        <p class="insurance-card-desc">Construye un capital para el futuro mientras proteges a los tuyos. Rentabilidad y seguridad en un Ãºnico producto.</p>
+        <ul class="insurance-features">
+          <li><span class="feature-dot"></span> Rentabilidad garantizada</li>
+          <li><span class="feature-dot"></span> Aportaciones periÃ³dicas o Ãºnicas</li>
+          <li><span class="feature-dot"></span> Rescate parcial disponible</li>
+          <li><span class="feature-dot"></span> Ventajas fiscales IRPF</li>
+          <li><span class="feature-dot"></span> Beneficiarios designados</li>
+        </ul>
+        <button class="insurance-cta-btn btn-outline-light">Ver Condiciones</button>
+      </div>
+
+    </div>
+
+    <!-- Bottom info strip -->
+    <div style="margin-top: 44px; display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 400;">
+        <span style="font-size: 18px;">â</span> Sin compromiso de permanencia
+      </div>
+      <div style="width: 1px; height: 20px; background: rgba(255,255,255,0.1);"></div>
+      <div style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 400;">
+        <span style="font-size: 18px;">ð</span> Asesoramiento personalizado
+      </div>
+      <div style="width: 1px; height: 20px; background: rgba(255,255,255,0.1);"></div>
+      <div style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 400;">
+        <span style="font-size: 18px;">ð</span> Datos 100% protegidos
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RENTING VEHICLES SECTION ===== -->
+<section class="noemi-section renting-section">
+  <div class="section-container">
+
+    <div class="renting-header">
+      <div class="section-badge" style="background: linear-gradient(90deg, #0077b6, #00b4d8);">ð Renting de VehÃ­culos</div>
+      <h2 class="renting-title">Tu prÃ³ximo coche, <span>sin complicaciones</span></h2>
+      <p class="renting-subtitle">Todo incluido en una cuota mensual: seguro, mantenimiento, asistencia y mÃ¡s. Conduce sin preocupaciones.</p>
+    </div>
+
+    <!-- Top 3 vehicles -->
+    <div class="vehicles-grid">
+
+      <!-- Peugeot 208 -->
+      <div class="vehicle-card">
+        <div class="vehicle-card-header bg-peugeot">
+          <span class="vehicle-brand-badge">PEUGEOT</span>
+          <span class="vehicle-icon-big">ð</span>
+        </div>
+        <div class="vehicle-card-body">
+          <h3 class="vehicle-name">Peugeot 208</h3>
+          <p class="vehicle-type">Urbano Â· 5 puertas</p>
+          <div class="vehicle-price-row">
+            <div>
+              <div class="price-from">desde</div>
+              <div class="price-amount">189â¬</div>
+            </div>
+            <div class="price-period">/mes</div>
+          </div>
+          <div class="vehicle-specs">
+            <span class="spec-tag">â½ Gasolina</span>
+            <span class="spec-tag">ð 36 meses</span>
+            <span class="spec-tag">ð¡ï¸ Todo incluido</span>
+          </div>
+          <button class="vehicle-cta">Solicitar Info</button>
+        </div>
+      </div>
+
+      <!-- Kia Stonic -->
+      <div class="vehicle-card">
+        <div class="vehicle-card-header bg-kia">
+          <span class="vehicle-brand-badge">KIA</span>
+          <span class="vehicle-icon-big">ð</span>
+        </div>
+        <div class="vehicle-card-body">
+          <h3 class="vehicle-name">Kia Stonic</h3>
+          <p class="vehicle-type">SUV Compacto Â· 5 puertas</p>
+          <div class="vehicle-price-row">
+            <div>
+              <div class="price-from">desde</div>
+              <div class="price-amount">215â¬</div>
+            </div>
+            <div class="price-period">/mes</div>
+          </div>
+          <div class="vehicle-specs">
+            <span class="spec-tag">â½ HÃ­brido</span>
+            <span class="spec-tag">ð 36 meses</span>
+            <span class="spec-tag">ð¡ï¸ Todo incluido</span>
+          </div>
+          <button class="vehicle-cta">Solicitar Info</button>
+        </div>
+      </div>
+
+      <!-- Seat LeÃ³n -->
+      <div class="vehicle-card">
+        <div class="vehicle-card-header bg-seat">
+          <span class="vehicle-brand-badge">SEAT</span>
+          <span class="vehicle-icon-big">ð</span>
+        </div>
+        <div class="vehicle-card-body">
+          <h3 class="vehicle-name">Seat LeÃ³n</h3>
+          <p class="vehicle-type">Berlina Â· 5 puertas</p>
+          <div class="vehicle-price-row">
+            <div>
+              <div class="price-from">desde</div>
+              <div class="price-amount">239â¬</div>
+            </div>
+            <div class="price-period">/mes</div>
+          </div>
+          <div class="vehicle-specs">
+            <span class="spec-tag">â¡ e-Hybrid</span>
+            <span class="spec-tag">ð 48 meses</span>
+            <span class="spec-tag">ð¡ï¸ Todo incluido</span>
+          </div>
+          <button class="vehicle-cta">Solicitar Info</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom 2 vehicles -->
+    <div class="vehicles-grid-bottom">
+
+      <!-- VW Golf -->
+      <div class="vehicle-card">
+        <div class="vehicle-card-header bg-vw">
+          <span class="vehicle-brand-badge">VOLKSWAGEN</span>
+          <span class="vehicle-icon-big">ð</span>
+        </div>
+        <div class="vehicle-card-body">
+          <h3 class="vehicle-name">VW Golf</h3>
+          <p class="vehicle-type">Compacto Premium Â· 5 puertas</p>
+          <div class="vehicle-price-row">
+            <div>
+              <div class="price-from">desde</div>
+              <div class="price-amount">269â¬</div>
+            </div>
+            <div class="price-period">/mes</div>
+          </div>
+          <div class="vehicle-specs">
+            <span class="spec-tag">â¡ GTE HÃ­brido</span>
+            <span class="spec-tag">ð 48 meses</span>
+            <span class="spec-tag">ð¡ï¸ Todo incluido</span>
+          </div>
+          <button class="vehicle-cta">Solicitar Info</button>
+        </div>
+      </div>
+
+      <!-- Renault Austral -->
+      <div class="vehicle-card">
+        <div class="vehicle-card-header bg-renault">
+          <span class="vehicle-brand-badge">RENAULT</span>
+          <span class="vehicle-icon-big">ð</span>
+        </div>
+        <div class="vehicle-card-body">
+          <h3 class="vehicle-name">Renault Austral</h3>
+          <p class="vehicle-type">SUV Familiar Â· 5 puertas</p>
+          <div class="vehicle-price-row">
+            <div>
+              <div class="price-from">desde</div>
+              <div class="price-amount">299â¬</div>
+            </div>
+            <div class="price-period">/mes</div>
+          </div>
+          <div class="vehicle-specs">
+            <span class="spec-tag">â¡ E-Tech HÃ­brido</span>
+            <span class="spec-tag">ð 48 meses</span>
+            <span class="spec-tag">ð¡ï¸ Todo incluido</span>
+          </div>
+          <button class="vehicle-cta">Solicitar Info</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Info bar -->
+    <div class="renting-info-bar">
+      <div class="info-bar-text">
+        <strong>NoemÃ­ Herrera</strong> â Tu asesora de confianza en renting y seguros de vehÃ­culos
+      </div>
+      <div class="info-bar-badges">
+        <div class="info-badge"><span class="info-badge-dot"></span> Mantenimiento incluido</div>
+        <div class="info-badge"><span class="info-badge-dot"></span> Seguro a todo riesgo</div>
+        <div class="info-badge"><span class="info-badge-dot"></span> NeumÃ¡ticos incluidos</div>
+        <div class="info-badge"><span class="info-badge-dot"></span> Asistencia en carretera</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+  .nm-section {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* TESTIMONIALS */
+  .nm-testimonials {
+    background: linear-gradient(135deg, #fdf6f0 0%, #fef9f5 100%);
+    padding: 90px 20px;
+    text-align: center;
+  }
+
+  .nm-section-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #c9956a;
+    margin-bottom: 12px;
+  }
+
+  .nm-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    color: #2c2c2c;
+    margin: 0 0 16px;
+  }
+
+  .nm-section-subtitle {
+    font-size: 16px;
+    color: #888;
+    max-width: 520px;
+    margin: 0 auto 60px;
+    line-height: 1.7;
+  }
+
+  .nm-cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .nm-testimonial-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 36px 32px;
+    max-width: 330px;
+    flex: 1 1 280px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.07);
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .nm-testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 56px rgba(0,0,0,0.12);
+  }
+
+  .nm-quote-icon {
+    font-size: 56px;
+    line-height: 1;
+    color: #f0d9c8;
+    font-family: Georgia, serif;
+    position: absolute;
+    top: 18px;
+    left: 28px;
+  }
+
+  .nm-stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 18px;
+    margin-top: 20px;
+  }
+
+  .nm-star {
+    color: #f5a623;
+    font-size: 18px;
+  }
+
+  .nm-testimonial-text {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #555;
+    margin-bottom: 28px;
+    font-style: italic;
+  }
+
+  .nm-testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .nm-author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f0d9c8;
+    background: #f0d9c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #c9956a;
+    flex-shrink: 0;
+  }
+
+  .nm-author-name {
+    font-weight: 600;
+    font-size: 15px;
+    color: #2c2c2c;
+  }
+
+  .nm-author-role {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 2px;
+  }
+
+  /* CONTACT */
+  .nm-contact {
+    background: #fff;
+    padding: 90px 20px;
+  }
+
+  .nm-contact-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: flex-start;
+  }
+
+  .nm-contact-info {
+    flex: 1 1 300px;
+  }
+
+  .nm-contact-desc {
+    font-size: 15px;
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 36px;
+    max-width: 380px;
+  }
+
+  .nm-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+
+  .nm-contact-icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f0d9c8, #f5c8a8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .nm-contact-icon {
+    font-size: 18px;
+  }
+
+  .nm-contact-item-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #c9956a;
+    margin-bottom: 3px;
+  }
+
+  .nm-contact-item-value {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+  }
+
+  .nm-contact-item-value a {
+    color: #444;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nm-contact-item-value a:hover {
+    color: #c9956a;
+  }
+
+  .nm-map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 28px;
+    padding: 12px 24px;
+    background: #2c2c2c;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease, transform 0.2s;
+  }
+
+  .nm-map-link:hover {
+    background: #c9956a;
+    transform: translateY(-2px);
+  }
+
+  .nm-contact-form-wrap {
+    flex: 1 1 380px;
+    background: #fdf6f0;
+    border-radius: 24px;
+    padding: 44px 40px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+  }
+
+  .nm-form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin: 0 0 6px;
+  }
+
+  .nm-form-subtitle {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 30px;
+  }
+
+  .nm-form-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .nm-form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 140px;
+    margin-bottom: 18px;
+  }
+
+  .nm-form-group label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 7px;
+  }
+
+  .nm-form-group input,
+  .nm-form-group select,
+  .nm-form-group textarea {
+    border: 1.5px solid #ead9cc;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    resize: none;
+    appearance: none;
+  }
+
+  .nm-form-group input:focus,
+  .nm-form-group select:focus,
+  .nm-form-group textarea:focus {
+    border-color: #c9956a;
+    box-shadow: 0 0 0 3px rgba(201,149,106,0.15);
+  }
+
+  .nm-form-group textarea {
+    min-height: 110px;
+  }
+
+  .nm-form-submit {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #c9956a, #b87d52);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: opacity 0.3s, transform 0.2s;
+    margin-top: 6px;
+  }
+
+  .nm-form-submit:hover {
+    opacity: 0.88;
+    transform: translateY(-2px);
+  }
+
+  /* WHATSAPP WIDGET */
+  .nm-whatsapp-widget {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .nm-whatsapp-bubble {
+    background: #fff;
+    border-radius: 16px;
+    padding: 12px 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    max-width: 220px;
+    line-height: 1.5;
+    position: relative;
+    display: none;
+    animation: nm-fadeIn 0.3s ease;
+  }
+
+  .nm-whatsapp-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 22px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #fff;
+  }
+
+  .nm-whatsapp-bubble.nm-visible {
+    display: block;
+  }
+
+  .nm-whatsapp-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 28px rgba(37,211,102,0.45);
+    text-decoration: none;
+    position: relative;
+    animation: nm-pulse 2.2s infinite;
+    transition: transform 0.2s;
+  }
+
+  .nm-whatsapp-btn:hover {
+    transform: scale(1.08);
+    animation: none;
+    box-shadow: 0 8px 36px rgba(37,211,102,0.6);
+  }
+
+  .nm-whatsapp-btn svg {
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+  }
+
+  .nm-whatsapp-ping {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #ff4444;
+    border: 2px solid #fff;
+    animation: nm-ping 1.5s infinite;
+  }
+
+  @keyframes nm-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.55); }
+    50%  { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+  }
+
+  @keyframes nm-ping {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50%       { transform: scale(1.35); opacity: 0.7; }
+  }
+
+  @keyframes nm-fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 640px) {
+    .nm-contact-form-wrap { padding: 32px 24px; }
+    .nm-testimonial-card { padding: 28px 22px; }
+    .nm-contact-inner { gap: 40px; }
+    .nm-whatsapp-widget { bottom: 18px; right: 18px; }
+  }
+</style>
+
+<!-- ===== TESTIMONIALS SECTION ===== -->
+<section class="nm-section nm-testimonials">
+  <p class="nm-section-label">Lo que dicen de mÃ­</p>
+  <h2 class="nm-section-title">Testimonios de Clientes</h2>
+  <p class="nm-section-subtitle">La confianza de mis clientes es el mayor reflejo de mi compromiso y profesionalismo.</p>
+
+  <div class="nm-cards-grid">
+
+    <!-- Testimonial 1 -->
+    <div class="nm-testimonial-card">
+      <span class="nm-quote-icon">&ldquo;</span>
+      <div class="nm-stars">
+        <span class="nm-star">&#9733;</span>
+        <span class="nm-star">&#9733;</span>
+        <span class="nm-star">&#9733;</span>
+        <span class="nm-star">&#9733;</span>
+        <span class="nm-star">&#9733;</span>
+      </div>
+      <p class="nm-testimonial-text">
+        &ldquo;NoemÃ­ fue increÃ­ble durante todo el proceso de compra de nuestra casa. Siempre disponible, clara con la informaciÃ³n y nos guiÃ³ paso a paso. Â¡Nunca imaginÃ© que comprar una propiedad pudiera ser tan tranquilo!&rdquo;
+      </p>
+      <div class="nm-testimonial-author">
+        <div class="nm-author-avatar" style="background:#fde8d8;">M</div>
+        <div>
+          <div class="nm-author-name">Mariana LÃ³pez</div>
+          <div class="nm-author-role">Compradora de vivienda Â· CDMX</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="nm-testimonial-card">
+      <span class="nm-quote-icon">&ldquo;</span>
+      <div class="nm-stars">
+        <span class="nm-star">&#9733;</span>
+        <span class="nm-star">&#9733;</span>
+        <span class="nm-star">&#9733;</span>
+        <span class="nm-star">&#9733;</span>
+        <span class="nm-star">&#9733;</span>
+      </div>
+      <p class="nm-testimonial-text">
+        &ldquo;Vendimos nuestro departamento en menos de tres semanas gracias a la estrategia de NoemÃ­. Su manejo de redes, fotografÃ­a profesional y atenciÃ³n al cliente fueron clave. 100% recomendada sin dudarlo.&rdquo;
+      </p>
+      <div class="nm-testimonial-author">
+        <div class="nm-author-avatar" style="background:#dce8fd;">R</div>
+        <div>
+          <div class="nm-author-name">Roberto Fuentes</div>
+          <div class="nm-author-role">Vendedor Â· Guadalajara</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="nm-testimonial-card">
+      <span class="nm-quote-icon">&ldquo;</span>
+      <div class="nm-stars">
+        <span class="nm-star">&#9733;</span>
+        <span class="nm-star">&#9733;</span>
+        <span class="nm-star">&#9733;</span>
+        <span class="nm-star">&#9733;</span>
+        <span class="nm-star">&#9733;</span>
+      </div>
+      <p class="nm-testimonial-text">
+        &ldquo;Como inversora, valoro mucho el anÃ¡lisis de mercado que NoemÃ­ me proporcionÃ³. EncontrÃ³ propiedades con excelente rendimiento y todo el proceso fue impecable. Es mi agente de confianza para cualquier inversiÃ³n futura.&rdquo;
+      </p>
+      <div class="nm-testimonial-author">
+        <div class="nm-author-avatar" style="background:#d8fde8;">C</div>
+        <div>
+          <div class="nm-author-name">Claudia Mendoza</div>
+          <div class="nm-author-role">Inversora inmobiliaria Â· Monterrey</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section class="nm-section nm-contact">
+  <div style="text-align:center; margin-bottom:60px;">
+    <p class="nm-section-label">Hablemos</p>
+    <h2 class="nm-section-title">ContÃ¡ctame</h2>
+    <p class="nm-section-subtitle" style="margin-bottom:0;">Estoy lista para acompaÃ±arte en tu prÃ³xima operaciÃ³n inmobiliaria. EscrÃ­beme, llÃ¡mame o visÃ­tame.</p>
+  </div>
+
+  <div class="nm-contact-inner">
+
+    <!-- Contact Info -->
+    <div class="nm-contact-info">
+      <p class="nm-section-label" style="text-align:left;">InformaciÃ³n de Contacto</p>
+      <p class="nm-contact-desc">No importa si estÃ¡s buscando comprar, vender o invertir â mi equipo y yo estamos aquÃ­ para ayudarte en cada paso del camino.</p>
+
+      <div class="nm-contact-item">
+        <div class="nm-contact-icon-wrap"><span class="nm-contact-icon">ð§</span></div>
+        <div>
+          <div class="nm-contact-item-label">Correo ElectrÃ³nico</div>
+          <div class="nm-contact-item-value"><a href="mailto:noemi@herrerapropiedades.mx">noemi@herrerapropiedades.mx</a></div>
+        </div>
+      </div>
+
+      <div class="nm-contact-item">
+        <div class="nm-contact-icon-wrap"><span class="nm-contact-icon">ð</span></div>
+        <div>
+          <div class="nm-contact-item-label">TelÃ©fono / WhatsApp</div>
+          <div class="nm-contact-item-value">
+            <a href="tel:+525512345678">+52 55 1234 5678</a><br>
+            <a href="tel:+528001234567">+52 800 123 4567</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nm-contact-item">
+        <div class="nm-contact-icon-wrap"><span class="nm-contact-icon">ð</span></div>
+        <div>
+          <div class="nm-contact-item-label">Oficina</div>
+          <div class="nm-contact-item-value">Av. Insurgentes Sur 1457, Piso 8<br>Col. Insurgentes Mixcoac, CDMX</div>
+        </div>
+      </div>
+
+      <div class="nm-contact-item">
+        <div class="nm-contact-icon-wrap"><span class="nm-contact-icon">ð</span></div>
+        <div>
+          <div class="nm-contact-item-label">Horario de AtenciÃ³n</div>
+          <div class="nm-contact-item-value">Lun â Vie: 9:00 am â 7:00 pm<br>SÃ¡b: 10:00 am â 2:00 pm</div>
+        </div>
+      </div>
+
+      <a href="https://maps.google.com/?q=Av.+Insurgentes+Sur+1457+CDMX" target="_blank" rel="noopener" class="nm-map-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Ver en Google Maps
+      </a>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="nm-contact-form-wrap">
+      <h3 class="nm-form-title">EnvÃ­ame un Mensaje</h3>
+      <p class="nm-form-subtitle">Te respondo en menos de 24 horas</p>
+
+      <form onsubmit="nmHandleSubmit(event)">
+        <div class="nm-form-row">
+          <div class="nm-form-group">
+            <label for="nm-fname">Nombre</label>
+            <input id="nm-fname" type="text" placeholder="Tu nombre" required />
+          </div>
+          <div class="nm-form-group">
+            <label for="nm-lname">Apellido</label>
+            <input id="nm-lname" type="text" placeholder="Tu apellido" />
+          </div>
+        </div>
+
+        <div class="nm-form-group">
+          <label for="nm-email">Correo ElectrÃ³nico</label>
+          <input id="nm-email" type="email" placeholder="correo@ejemplo.com" required />
+        </div>
+
+        <div class="nm-form-group">
+          <label for="nm-phone">TelÃ©fono</label>
+          <input id="nm-phone" type="tel" placeholder="+52 55 0000 0000" />
+        </div>
+
+        <div class="nm-form-group">
+          <label for="nm-interest">Â¿En quÃ© estÃ¡s interesado?</label>
+          <select id="nm-interest">
+            <option value="" disabled selected>Selecciona una opciÃ³n</option>
+            <option value="compra">Comprar una propiedad</option>
+            <option value="venta">Vender una propiedad</option>
+            <option value="renta">Rentar una propiedad</option>
+            <option value="inversion">InversiÃ³n inmobiliaria</option>
+            <option value="valuacion">ValuaciÃ³n de inmueble</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="nm-form-group">
+          <label for="nm-message">Mensaje</label>
+          <textarea id="nm-message" placeholder="CuÃ©ntame sobre lo que estÃ¡s buscando..."></textarea>
+        </div>
+
+        <button type="submit" class="nm-form-submit">â Enviar Mensaje</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== WHATSAPP FLOATING WIDGET ===== -->
+<div class="nm-whatsapp-widget" id="nmWhatsappWidget">
+  <div class="nm-whatsapp-bubble" id="nmWaBubble">
+    ð Â¡Hola! Estoy disponible para ayudarte. Â¿Tienes alguna pregunta sobre propiedades?
+  </div>
+  <a
+    href="https://wa.me/525512345678?text=Hola%20NoemÃ­%2C%20me%20interesa%20obtener%20mÃ¡s%20informaciÃ³n%20sobre%20tus%20propiedades."
+    target="_blank"
+    rel="noopener"
+    class="nm-whatsapp-btn"
+    id="nmWaBtn"
+    aria-label="Contactar por WhatsApp"
+    title="EscrÃ­beme por WhatsApp"
+    onclick="nmToggleBubble(event)"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <path d="M16.002 2.667C8.636 2.667 2.667 8.636 2.667 16c0 2.327.627 4.507 1.72 6.387L2.667 29.333l7.147-1.693A13.263 13.263 0 0 0 16.002 29.333C23.368 29.333 29.333 23.364 29.333 16S23.368 2.667 16.002 2.667zm0 2.4c5.927 0 10.931 5.004 10.931 10.933 0 5.929-5.004 10.933-10.931 10.933-2.124 0-4.102-.615-5.775-1.676l-.413-.259-4.244 1.003.99-4.096-.279-.437A10.896 10.896 0 0 1 5.07 16c0-5.929 5.004-10.933 10.932-10.933zm-3.32 5.76c-.213 0-.56.08-.853.4-.293.32-1.12 1.093-1.12 2.667 0 1.573 1.147 3.093 1.307 3.307.16.213 2.24 3.573 5.52 4.853 2.733 1.067 3.28.853 3.867.8.587-.053 1.893-.773 2.16-1.52.267-.747.267-1.387.187-1.52-.08-.133-.293-.213-.613-.373-.32-.16-1.893-.933-2.187-1.04-.293-.107-.507-.16-.72.16s-.827 1.04-1.013 1.253c-.187.213-.373.24-.693.08-.32-.16-1.351-.499-2.573-1.587-.952-.847-1.593-1.893-1.78-2.213-.187-.32-.02-.493.14-.653.145-.143.32-.373.48-.56.16-.187.213-.32.32-.533.107-.213.053-.4-.027-.56-.08-.16-.707-1.747-.98-2.387-.253-.613-.517-.52-.72-.52z"/>
+    </svg>
+    <span class="nm-whatsapp-ping"></span>
+  </a>
+</div>
+
+<script>
+  // Show bubble after 3 seconds automatically
+  setTimeout(function() {
+    var bubble = document.getElementById('nmWaBubble');
+    if (bubble) bubble.classList.add('nm-visible');
+  }, 3000);
+
+  // Hide bubble after 8 seconds
+  setTimeout(function() {
+    var bubble = document.getElementById('nmWaBubble');
+    if (bubble) bubble.classList.remove('nm-visible');
+  }, 8000);
+
+  function nmToggleBubble(e) {
+    // Allow the link to open, just toggle bubble on click
+    var bubble = document.getElementById('nmWaBubble');
+    if (bubble) bubble.classList.toggle('nm-visible');
+  }
+
+  function nmHandleSubmit(e) {
+    e.preventDefault();
+    var btn = e.target.querySelector('.nm-form-submit');
+    btn.textContent = 'â Â¡Mensaje Enviado!';
+    btn.style.background = 'linear-gradient(135deg, #4CAF50, #388E3C)';
+    btn.disabled = true;
+    setTimeout(function() {
+      btn.textContent = 'â Enviar Mensaje';
+      btn.style.background = '';
+      btn.disabled = false;
+      e.target.reset();
+    }, 3500);
+  }
+</script>
+</body>
+</html>
